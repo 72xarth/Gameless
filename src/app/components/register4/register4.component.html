@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="nav">
+        <div class="title">
+                <img src="../../../assets/icon_web-removebg-preview.png" alt="" width="250vw" height="60vw">
+                <div style="justify-content: center; align-items: center; display: flex;  width: 90vh; "> 
+                    <button mat-button style="margin-left: 2vw; color: #000000; font-size: 1vw;" routerLink="/rank">Rank</button>
+                    <button mat-button style="margin-left: 2vw; color: #000000; font-size: 1vw;" routerLink="/status">Status</button>
+                    <button mat-button style="margin-left: 2vw; color: #000000; font-size: 1vw;" routerLink="/admins">Admins</button>
+                    <button mat-button style="margin-left: 2vw; color: #000000; font-size: 1vw;" routerLink="/yourgame">Yourgame</button>
+                    <button mat-button style="margin-left: 2vw; color: #000000; font-size: 1vw;" routerLink="/upload-edit">Upload/edit</button>
+                </div>
+                
+        </div>
+        <div class="profile" style="width: 30vh;">
+            <a href="profile" style="font-size: 1vw; margin-left: 2vw; color: rgb(0, 0, 0);"> Register</a>   
+            <img src="https://media.istockphoto.com/id/656673020/photo/handsome-in-spectacles.jpg?s=612x612&w=0&k=20&c=klIlcueGJlAnOehrIZNpvFrVT_olKKqhaVT77H5Fj-s=" alt="" width="70vh" height="70pvh">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="maincon">
+            <div class="card">
+                <div class="text1">
+                    <h1>
+                        Create your account
+                    </h1>
+                </div>
+                <div>
+                    <div style="display: grid; align-items: center;  margin-right: 6vw;">
+                        <h3 style="margin-left: 5vw;">Username : &nbsp;</h3>
+                        <div  style="display: flex; justify-content: center; align-items: center;">
+                            <span class="material-symbols-outlined" style="font-size: 2vw; margin-right: 1vw;">
+                                person
+                            </span>
+                            <div class="inputGroup" >
+                                <input type="text" style="width: 16vw;">
+                                <label for="name" >USERNAME</label >
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: grid; align-items: center;  margin-right: 6vw;">
+                        <h3 style="margin-left: 5vw;">Password: &nbsp;</h3>
+                        <div  style="display: flex; justify-content: center; align-items: center;">
+                            <span class="material-symbols-outlined" style="font-size: 2vw; margin-right: 1vw;">
+                                Email
+                            </span>
+                            <div class="inputGroup" >
+                                <input type="email"  style="width: 16vw;">
+                                <label for="name" >Email</label >
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: grid; align-items: center;  margin-right: 6vw;">
+                        <h3 style="margin-left: 5vw;">Password: &nbsp;</h3>
+                        <div  style="display: flex; justify-content: center; align-items: center;">
+                            <span class="material-symbols-outlined" style="font-size: 2vw; margin-right: 1vw;">
+                                lock
+                            </span>
+                            <div class="inputGroup" >
+                                <input type="password"  style="width: 16vw;">
+                                <label for="name" >PASSWORD</label >
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: grid; align-items: center;  ">
+                        <h3 style="margin-left: 5vw;">Picture: &nbsp;</h3>
+                        <div  style="display: flex; justify-content: center; align-items: center;">
+                            <span class="material-symbols-outlined" style="font-size: 2vw; margin-right: 1vw;">
+                                image
+                            </span>
+                            <input type="file" accept="image/*" style="width: 16vw;">
+                        </div>
+                    </div>
+                    <br>
+                    <div style="display: grid; justify-content: center; align-items: center;">
+                        <button  style="width: 20vw;">
+                            <span class="shadow"></span>
+                            <span class="edge"></span>
+                            <span class="front text"> Register
+                            </span>
+                        </button>  
+                        <a routerLink="/login2" style="justify-content: center; align-items: center; display: flex; color: #000; margin-top: 1.5vw;">Already have an account? Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
