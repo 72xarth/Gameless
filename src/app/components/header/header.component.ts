@@ -13,4 +13,7 @@ import { RouterLink, RouterModule } from '@angular/router';
 })
 export class HeaderComponent {
 
+  back() {
+    window.history.back();
+}
 }

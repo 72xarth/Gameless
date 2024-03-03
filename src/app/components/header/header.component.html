@@ -14,7 +14,7 @@
 <body>
     <div class="nav">
         <div class="title">
-                <img src="../../../assets/icon_web-removebg-preview.png" alt="" width="250vw" height="60vw">
+            <a routerLink="/">  <img src="../../../assets/icon_web-removebg-preview.png" alt="" width="250vw" height="60vw"></a>
                 <div style="justify-content: center; align-items: center; display: flex;  width: 90vh; "> 
                     <button mat-button style="margin-left: 2vw; color: #ffffff; font-size: 1vw;" routerLink="/rank">Rank</button>
                     <button mat-button style="margin-left: 2vw; color: #ffffff; font-size: 1vw;" routerLink="/status">Status</button>
@@ -30,6 +30,9 @@
 </div>
             <div class="container" >
                 <div class="maincon">
+                    <div style="width: 5vw; ">
+
+                    </div>
                      <div class="card">
                             <div style="display: grid;  width: 25vw; margin-left: 2vw; ">
                                 <h1 style="margin-bottom: 30px; margin-top: 2vw; font-size: 2vw;"> About Me</h1>  
@@ -58,17 +61,20 @@
                                             <span class="front text">Edit</span>
                                         </button>
                                     </a>
-                                    
-                                   
 
-                                   
-                                 
                                  </div>
-                               
-                                 
-
                         </div>
-                       
+                        <div style="display: grid; height: 70vh; justify-content: space-between; gap: 50vw;">
+                            <button (click)="back()">
+                                <span class="shadow"></span>
+                                <span class="edge"></span>
+                                <span class="front text">Back</span>
+                            </button>
+                            <div>
+
+                            </div>
+                        </div>
+                     
                     </div>
 
                                     

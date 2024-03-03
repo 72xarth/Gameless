@@ -12,5 +12,7 @@ import { RouterLink,RouterModule } from '@angular/router';
   styleUrl: './edit-p.component.scss'
 })
 export class EditPComponent {
-
+  back() {
+    window.history.back();
+}
 }

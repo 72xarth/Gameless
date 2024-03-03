@@ -10,5 +10,10 @@ import { RouterLink, RouterModule } from '@angular/router';
   styleUrl: './standing.component.scss'
 })
 export class StandingComponent {
+back() {
+  
+    window.history.back();
+  
+}
 
 }
