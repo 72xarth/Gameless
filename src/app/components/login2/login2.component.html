@@ -42,14 +42,15 @@
                                     </h1>
                         </div>
                         <div>
+                            <form [formGroup]="loginForm" (ngSubmit)="login">
                             <div style="display: grid; align-items: center;  margin-right: 6vw;">
                                 <h3 style="margin-left: 5vw;">Username : &nbsp;</h3>
-                                <div  style="display: flex; justify-content: center; align-items: center;">
+                                <div style="display: flex; justify-content: center; align-items: center;">
                                     <span class="material-symbols-outlined" style="font-size: 2vw; margin-right: 1vw;">
                                         person
                                         </span>
                                     <div class="inputGroup" >
-                                        <input type="text" style="width: 16vw;">
+                                        <input formControlName="gmail" type="email" style="width: 16vw;">
                                         <label for="name" >USER</label >
                                     </div>
                                 </div>
@@ -57,12 +58,12 @@
                             </div>
                             <div style="display: grid; align-items: center;  margin-right: 6vw;">
                                 <h3 style="margin-left: 5vw;">Password: &nbsp;</h3>
-                                <div  style="display: flex; justify-content: center; align-items: center;">
+                                <div style="display: flex; justify-content: center; align-items: center;">
                                     <span class="material-symbols-outlined" style="font-size: 2vw; margin-right: 1vw;">
                                         lock
                                         </span>
                                     <div class="inputGroup" >
-                                        <input type="text"  style="width: 16vw;">
+                                        <input formControlName="password" type="password"  style="width: 16vw;">
                                         <label for="name" >PASSWORD</label >
                                     </div>
                                 </div>
@@ -79,7 +80,9 @@
                               <a routerLink="/register" style="justify-content: center; align-items: center; display: flex; color: #000; margin-top: 1.5vw;"> REGISTER</a>
                         </div>
                        
-                    </div>
+                    </form>
+                </div>
+               
                   
                    
         </div>
