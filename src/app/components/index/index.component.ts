@@ -26,9 +26,38 @@ export class IndexComponent implements OnInit{
  
     const url = `http://localhost:3000/game/picture`;
     const data = await lastValueFrom(this.http.get(url));
+    this.data = data;
 
     
-    this.data = data;
+  }
+
+  async click1() {
+    let json = {
+      
+      win : "A",
+      gid1 : this.data[0].gid,
+      score1 : this.data[0].score,
+      gid2 : this.data[0].gid,
+      score2 : this.data[0].score
+
+    }
+    this.findOne();
+
+}
+
+  async click2(){
+    let json = {
+      
+      win : "A",
+      gid1 : this.data[0].gid,
+      score1 : this.data[0].score,
+      gid2 : this.data[0].gid,
+      score2 : this.data[0].score
+
+    }
+    this.findOne();
+
+
   }
 
 
