@@ -6,8 +6,7 @@ import { Login2Component } from './components/login2/login2.component';
 import { IndexComponent } from './components/index/index.component';
 import { Register4Component } from './components/register4/register4.component';
 import { StandingComponent } from './components/standing/standing.component';
-// import { Login1Component } from './components/login1/login1.component';
-// import { Login1Component } from './login1/login1.component';
+
 
 export const routes: Routes = [
     {path: 'profile', component: HeaderComponent},
@@ -17,6 +16,5 @@ export const routes: Routes = [
     {path: 'register', component: Register4Component},
     {path: 'rank', component: StandingComponent},
     {path: '', component: IndexComponent}
-    
-  
+
 ];

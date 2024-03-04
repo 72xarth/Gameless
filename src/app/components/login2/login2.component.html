@@ -33,62 +33,51 @@
         </div>
 </div>
 
-    <div class="container">
-        <div class="maincon">
-                    <div class="card">
-                        <div class="text1">
-                                    <h1>
-                                        Sign into your account
-                                    </h1>
+<div class="container">
+    <div class="maincon">
+        <div class="card">
+            <div class="text1">
+                <h1>
+                    Sign into your account
+                </h1>
+            </div>
+            
+            <form [formGroup]="myForm" (ngSubmit)="submitForm()">
+                <div style="display: grid; align-items: center; margin-right: 6vw;">
+                    <h3 style="margin-left: 5vw;">Email : &nbsp;</h3>
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <span class="material-symbols-outlined" style="font-size: 2vw; margin-right: 1vw;">person</span>
+                        <div class="inputGroup">
+                            <input type="text" style="width: 16vw;" formControlName="gmail">
+                            <label for="gmail">Email</label>
                         </div>
-                        <div>
-                            <form [formGroup]="loginForm" (ngSubmit)="login">
-                            <div style="display: grid; align-items: center;  margin-right: 6vw;">
-                                <h3 style="margin-left: 5vw;">Username : &nbsp;</h3>
-                                <div style="display: flex; justify-content: center; align-items: center;">
-                                    <span class="material-symbols-outlined" style="font-size: 2vw; margin-right: 1vw;">
-                                        person
-                                        </span>
-                                    <div class="inputGroup" >
-                                        <input formControlName="gmail" type="email" style="width: 16vw;">
-                                        <label for="name" >USER</label >
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div style="display: grid; align-items: center;  margin-right: 6vw;">
-                                <h3 style="margin-left: 5vw;">Password: &nbsp;</h3>
-                                <div style="display: flex; justify-content: center; align-items: center;">
-                                    <span class="material-symbols-outlined" style="font-size: 2vw; margin-right: 1vw;">
-                                        lock
-                                        </span>
-                                    <div class="inputGroup" >
-                                        <input formControlName="password" type="password"  style="width: 16vw;">
-                                        <label for="name" >PASSWORD</label >
-                                    </div>
-                                </div>
-                                
-                            </div>
-                                <br>
-                        <div style="display: grid; justify-content: center; align-items: center;">
-                            <button  style="width: 10vw;">
-                                <span class="shadow"></span>
-                                <span class="edge"></span>
-                                <span class="front text"> Login
-                                </span>
-                              </button>  
-                              <a routerLink="/register" style="justify-content: center; align-items: center; display: flex; color: #000; margin-top: 1.5vw;"> REGISTER</a>
-                        </div>
-                       
-                    </form>
+                    </div>
                 </div>
-               
-                  
-                   
+                <div style="display: grid; align-items: center; margin-right: 6vw;">
+                    <h3 style="margin-left: 5vw;">Password: &nbsp;</h3>
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <span class="material-symbols-outlined" style="font-size: 2vw; margin-right: 1vw;">lock</span>
+                        <div class="inputGroup">
+                            <input type="password" style="width: 16vw;" formControlName="password">
+                            <label for="password">PASSWORD</label>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div style="display: grid; justify-content: center; align-items: center;">
+                    <button style="width: 10vw;" type="submit">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <span class="front text">Login</span>
+                    </button>
+                    <a routerLink="/register" style="justify-content: center; align-items: center; display: flex; color: #000; margin-top: 1.5vw;"> REGISTER</a>
+                </div>
+            </form>
+            
         </div>
-
-     </div>
+    </div>
 </div>
+
   
 </body>
 
