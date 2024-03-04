@@ -6,6 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { lastValueFrom } from 'rxjs';
+import { ApiService } from '../../service/appdata.service';
 
 
 @Component({
@@ -16,7 +17,7 @@ import { lastValueFrom } from 'rxjs';
   styleUrl: './index.component.scss'
 })
 export class IndexComponent implements OnInit{
-  constructor(private http : HttpClient){}
+  constructor(private http : HttpClient,private api : ApiService){}
   data! : any;
   ngOnInit(): void {
     this.findOne();
@@ -35,12 +36,13 @@ export class IndexComponent implements OnInit{
     let json = {
       
       win : "A",
-      gid1 : this.data[0].gid,
-      score1 : this.data[0].score,
-      gid2 : this.data[0].gid,
-      score2 : this.data[0].score
+      gidA : this.data[0].gid,
+      scoreA : this.data[0].score,
+      gidB : this.data[1].gid,
+      scoreB : this.data[1].score
 
     }
+    await this.api.updatescore(json);
     this.findOne();
 
 }
@@ -48,13 +50,14 @@ export class IndexComponent implements OnInit{
   async click2(){
     let json = {
       
-      win : "A",
-      gid1 : this.data[0].gid,
-      score1 : this.data[0].score,
-      gid2 : this.data[0].gid,
-      score2 : this.data[0].score
+      win : "B",
+      gidA : this.data[0].gid,
+      scoreA : this.data[0].score,
+      gidB : this.data[1].gid,
+      scoreB : this.data[1].score
 
     }
+    await this.api.updatescore(json);
     this.findOne();
 
 

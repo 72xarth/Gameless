@@ -65,11 +65,12 @@ export class ApiService {
     const url = `${this.constants.API_ENDPOINT}/upload`;
     return this.http.post(url, option);
   }
+
+  // update score 
+  public async updatescore(options?: any) {    
+    const url = `${this.constants.API_ENDPOINT}/scoreupdate`;
+    
+    return lastValueFrom(this.http.put(url, options));
+  }
 }
 
-@Injectable({
-  providedIn: 'root'
-})
-export class AppdataService {
-  constructor() { }
-}
