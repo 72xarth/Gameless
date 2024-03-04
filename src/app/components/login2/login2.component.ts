@@ -36,12 +36,15 @@ export class Login2Component implements OnInit {
   async Checklogin(jsonData: any) {
     this.bool = await this.api.checkLogin(jsonData);
  
-  
+
     
     
     
     if(typeof this.bool.uid === 'number'){
-        this.route.navigate(['/rank/']);
+      localStorage.setItem('id',this.bool.UID);
+      localStorage.setItem('name',this.bool.name);
+        this.route.navigate(['/login2/']);
+
     }
     else{
       console.log("wrong");

@@ -11,10 +11,10 @@ import { StandingComponent } from './components/standing/standing.component';
 export const routes: Routes = [
     {path: 'profile', component: HeaderComponent},
     {path: 'edit', component: EditPComponent},
-    {path: 'unlogin', component: Login1Component},
+    {path: '', component: Login1Component},
     {path: 'login', component: Login2Component},
     {path: 'register', component: Register4Component},
     {path: 'rank', component: StandingComponent},
-    {path: '', component: IndexComponent}
+    {path: 'login2', component: IndexComponent}
 
 ];

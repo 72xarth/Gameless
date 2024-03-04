@@ -1,5 +1,5 @@
 import { Component, NgModule, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
 import { HttpClient } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
@@ -17,9 +17,18 @@ import { ApiService } from '../../service/appdata.service';
   styleUrl: './index.component.scss'
 })
 export class IndexComponent implements OnInit{
-  constructor(private http : HttpClient,private api : ApiService){}
+  
+
+  constructor(private http : HttpClient,private api : ApiService,private route:Router){}
   data! : any;
+  data1! : any;
+  data2! : any;
+  id: any;
+  name : any;
   ngOnInit(): void {
+    this.id = localStorage.getItem('id');
+    console.log(this.id);
+    this.name = localStorage.getItem('name');
     this.findOne();
   }
   
@@ -28,8 +37,8 @@ export class IndexComponent implements OnInit{
     const url = `http://localhost:3000/game/picture`;
     const data = await lastValueFrom(this.http.get(url));
     this.data = data;
-
-    
+    this.data1 = this.data[0];
+    this.data2 = this.data[1];
   }
 
   async click1() {
@@ -61,6 +70,11 @@ export class IndexComponent implements OnInit{
     this.findOne();
 
 
+  }
+
+  logout(){
+      localStorage.clear();
+      this.route.navigate(['/login/']);
   }
 
 

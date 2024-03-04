@@ -12,7 +12,7 @@ import { RouterLink, RouterModule } from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-
+    
   back() {
     window.history.back();
 }
