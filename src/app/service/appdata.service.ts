@@ -13,14 +13,15 @@ export class ApiService {
   // Login 
   public async checkLogin(options?: any) {    
     const url = `${this.constants.API_ENDPOINT}/test`;
-    console.log(url);
     
     return lastValueFrom(this.http.post(url, options));
   }
 
   // Register 
   public async register(option: any) {
-    const url = `${this.constants.API_ENDPOINT}/user`;
+    const url = `${this.constants.API_ENDPOINT}/game/insert`;
+    console.log(url);
+    
     return lastValueFrom(this.http.post(url, option));
   }
 

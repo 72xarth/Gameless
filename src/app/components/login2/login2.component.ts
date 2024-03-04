@@ -41,7 +41,6 @@ export class Login2Component implements OnInit {
     
     
     if(typeof this.bool.uid === 'number'){
-  
         this.route.navigate(['/rank/']);
     }
     else{
