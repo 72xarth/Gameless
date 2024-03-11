@@ -18,7 +18,7 @@ export class ApiService {
   }
 
   // Register 
-  public async register(option: any) {
+  public async register(option?: any) {
     const url = `${this.constants.API_ENDPOINT}/game/insert`;
     console.log(url);
     
@@ -29,6 +29,14 @@ export class ApiService {
   public async getImage() {    
     const url = `${this.constants.API_ENDPOINT}/image`;
     return lastValueFrom(this.http.get(url));
+  }
+
+  // Get date
+  public async getDate() {    
+    
+    const url = `${this.constants.API_ENDPOINT}/date`;
+    const result = await lastValueFrom(this.http.get(url));
+    return result;
   }
 
   public async getImageAll() {    

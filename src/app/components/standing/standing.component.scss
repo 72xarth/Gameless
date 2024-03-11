@@ -32,6 +32,36 @@
    justify-content: center;
    height: 90vh;
    width: 100%;
-   border: 1px solid rgb(255, 0, 0);
-
+}
+.card{
+   
+    background-color: white;
+     height: 40vw;
+     width: 60vw;
+     border: 1px solid rgb(0, 0, 0);
+     border-top-left-radius: 5%;
+     border-top-right-radius: 5%;
+     border-bottom-left-radius: 5%;
+     border-bottom-right-radius: 5%;
+}
+.text{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1vw;
+    color: black;
+   
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    padding: 1vw;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
 }
