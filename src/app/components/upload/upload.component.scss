@@ -1,0 +1,48 @@
+.nav{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#BC1823 ;
+}
+.title{
+   
+    width: 50vw;
+    align-items: center;
+    display: flex;
+}
+.profile{
+    
+    width: 15vw;
+    align-items: center;
+    display: flex;
+}
+.profile img{
+    margin-left: 35px;
+    border-radius: 50%;
+}
+.container{
+    height:90vh;
+    background-image:url(../../../assets/bg.jpg);
+}
+.maincon{
+   display: grid;
+   align-items: center;
+   justify-content: center;
+   height: 90vh;
+   width: 100%;
+}
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+     height:45vw;
+     width: 60vw;
+     border: 1px solid rgb(0, 0, 0);
+     border-top-left-radius: 10%;
+     border-top-right-radius: 10%;
+     border-bottom-left-radius: 10%;
+     border-bottom-right-radius: 10%;
+}

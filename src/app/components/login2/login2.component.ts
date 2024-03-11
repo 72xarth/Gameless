@@ -41,7 +41,9 @@ export class Login2Component implements OnInit {
     
     
     if(typeof this.bool.uid === 'number'){
-      localStorage.setItem('id',this.bool.UID);
+      console.log(this.bool);
+      
+      localStorage.setItem('id',this.bool.uid);
       localStorage.setItem('name',this.bool.name);
       localStorage.setItem('image',this.bool.url);
         this.route.navigate(['/login2/']);

@@ -6,6 +6,7 @@ import { Login2Component } from './components/login2/login2.component';
 import { IndexComponent } from './components/index/index.component';
 import { Register4Component } from './components/register4/register4.component';
 import { StandingComponent } from './components/standing/standing.component';
+import { UploadComponent } from './components/upload/upload.component';
 
 
 export const routes: Routes = [
@@ -15,6 +16,7 @@ export const routes: Routes = [
     {path: 'login', component: Login2Component},
     {path: 'register', component: Register4Component},
     {path: 'rank', component: StandingComponent},
+    {path: 'upload', component: UploadComponent},
     {path: 'login2', component: IndexComponent}
 
 ];

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Constants } from '../config/constants';
+import { Constants1 } from '../config/constants';
 import { HttpClient } from '@angular/common/http';
 import { lastValueFrom } from 'rxjs';
 
@@ -8,7 +9,7 @@ import { lastValueFrom } from 'rxjs';
 })
 export class ApiService {
   
-  constructor(private constants: Constants, private http: HttpClient) {}
+  constructor(private constants: Constants, private constants1: Constants, private http: HttpClient) {}
 
   // Login 
   public async checkLogin(options?: any) {    
@@ -25,11 +26,26 @@ export class ApiService {
     return lastValueFrom(this.http.post(url, option));
   }
 
+
+  //upload
+  public async upload(option?: any,id? : any) {
+    const url = "http://localhost:3000/upload"+"/"+id;    
+    return lastValueFrom(this.http.post(url, option));
+  }
+
+
+
   // Get image
-  public async getImage() {    
-    const url = `${this.constants.API_ENDPOINT}/image`;
+  public async getImage(id?: any) {    
+    const url = `${this.constants.API_ENDPOINT}/image/${id}`;
     return lastValueFrom(this.http.get(url));
   }
+
+  public async deleteImage(id?: any) {    
+    const url = `${this.constants.API_ENDPOINT}/image/${id}`;
+    return lastValueFrom(this.http.delete(url));
+  }
+  
 
   // Get date
   public async getDate() {    

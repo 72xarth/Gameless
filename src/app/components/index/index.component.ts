@@ -27,7 +27,7 @@ export class IndexComponent implements OnInit{
   name : any;
   image : any;
   ngOnInit(): void {
-    this.id = localStorage.getItem('image');
+    this.image = localStorage.getItem('image');
     this.id = localStorage.getItem('id');
     console.log(this.id);
     this.name = localStorage.getItem('name');
