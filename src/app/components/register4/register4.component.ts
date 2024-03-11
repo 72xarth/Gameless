@@ -15,7 +15,7 @@ import { ApiService } from '../../service/appdata.service';
 })
 export class Register4Component implements OnInit {
   myForm!: FormGroup;
-
+  FormData : FormData = new FormData();
   constructor(private formBuilder: FormBuilder,private api: ApiService,private route:Router) { }
 
   ngOnInit(): void {
@@ -23,18 +23,31 @@ export class Register4Component implements OnInit {
       name: [''],
       gmail: ['' ],
       password: [''],
+      file:['']
       
     });
   }
 
   async submitForm() {
-      let formData = this.myForm.value;
-          console.log(formData);
-          this.register(formData);
+    if(this.myForm.valid){
+      this.FormData.append('name',this.myForm.get('name')!.value);
+      this.FormData.append('gmail',this.myForm.get('gmail')!.value);
+      this.FormData.append('password',this.myForm.get('password')!.value);
+    }
+    this.register(this.FormData);
+    this.FormData.forEach((value,key)=>{
+      console.log(key,' ',value);
+      
+    });
   }
 
   async register(jsonData: any) {
     await this.api.register(jsonData);
     this.route.navigate(['/login/']);
+  }
+
+  onFile($file : Event){
+    const file = ($file.target as HTMLInputElement).files![0];
+    this.FormData.append('file',file);
   }
 }
