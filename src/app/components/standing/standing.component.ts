@@ -3,17 +3,19 @@ import {MatButtonModule} from '@angular/material/button';
 import { Router, RouterLink, RouterModule } from '@angular/router';
 import {MatTableModule} from '@angular/material/table';
 import { ApiService } from '../../service/appdata.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-standing',
   standalone: true,
-  imports: [MatButtonModule,RouterLink,RouterModule,MatTableModule],
+  imports: [MatButtonModule,RouterLink,RouterModule,MatTableModule,CommonModule],
   templateUrl: './standing.component.html',
   styleUrl: './standing.component.scss'
 })
 export class StandingComponent {
 
   data : any;
+  DATA2 : any;
   
   constructor( private api: ApiService,private route:Router) { }
 
@@ -27,7 +29,13 @@ back() {
 
 async getDate() {
    this.data = await this.api.getDate();
+   if(this.data.length !=10){
+    for(let i = this.data.length ; i< 10;i++){
+      this.data.push("");
+    }
+ }
    console.log(this.data);        
 }
+
 
 }
