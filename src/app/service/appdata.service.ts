@@ -54,7 +54,13 @@ export class ApiService {
     const result = await lastValueFrom(this.http.get(url));
     return result;
   }
-
+// Get date
+public async getBefore() {    
+    
+  const url = `${this.constants.API_ENDPOINT}/before`;
+  const result = await lastValueFrom(this.http.get(url));
+  return result;
+}
   public async getImageAll() {    
     const url = `${this.constants.API_ENDPOINT}/image/all`;
     return lastValueFrom(this.http.get(url));

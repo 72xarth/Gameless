@@ -15,12 +15,13 @@ import { CommonModule } from '@angular/common';
 export class StandingComponent {
 
   data : any;
-  DATA2 : any;
-  
+  before: any;
+  rank:any;
   constructor( private api: ApiService,private route:Router) { }
 
   ngOnInit(): void {
     this.getDate();
+ 
   }
 
 back() { 
@@ -29,13 +30,33 @@ back() {
 
 async getDate() {
    this.data = await this.api.getDate();
+   this.before = await this.api.getBefore();
+   
    if(this.data.length !=10){
     for(let i = this.data.length ; i< 10;i++){
       this.data.push("");
     }
  }
-   console.log(this.data);        
+ console.log(this.data);
+ console.log(this.before);
+ 
+  
+}
+
+check(GSID: any) {
+ 
+      
+      
+      
+      for (let index = 0; index < this.before.length; index++) {
+        if (this.before[index].GSID == GSID) {
+          console.log(this.before[index].rank);
+          return this.before[index].rank;
+        }
+      }
+}
+
+  
 }
 
 
-}
