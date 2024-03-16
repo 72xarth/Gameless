@@ -54,19 +54,22 @@
                             <thead>
                                 <tr >
                                     <th>No.</th>
-                                    <th>img</th>
+                                    <th>detail</th>
                                     <th>score</th>
                                 </tr>
                             </thead>
                             <tbody *ngFor=" let i of data; let j = index ;">
                                 <tr style="font-size: smaller;">
-                                    <td>{{j+1}}</td>    
+                                    <td>{{j+1}}. <img src="{{i.url}}" alt="" width="50vw" height="50vw"></td>    
                                          <td> 
                                         <div> 
-                                            <img src="{{i.url}}" alt="" width="50vw" height="50vw">
+                                            <a routerLink="/graph/{{i.GSID}}">
+                                                <td>see more </td>
+                                            </a>
+                                            
                                          </div>
                                         </td>   
-                                    <td>{{i.score}}</td>
+                                    <td>{{i.total_score}}</td>
                                 </tr>
                             
                             </tbody>

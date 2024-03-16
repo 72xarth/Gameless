@@ -7,6 +7,7 @@ import { IndexComponent } from './components/index/index.component';
 import { Register4Component } from './components/register4/register4.component';
 import { StandingComponent } from './components/standing/standing.component';
 import { UploadComponent } from './components/upload/upload.component';
+import { GraphComponent } from './components/graph/graph.component';
 
 
 export const routes: Routes = [
@@ -17,6 +18,8 @@ export const routes: Routes = [
     {path: 'register', component: Register4Component},
     {path: 'rank', component: StandingComponent},
     {path: 'upload', component: UploadComponent},
-    {path: 'login2', component: IndexComponent}
+    {path: 'login2', component: IndexComponent},
+    {path: 'graph/:id', component: GraphComponent}
+    
 
 ];

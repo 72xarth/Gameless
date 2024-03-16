@@ -72,10 +72,12 @@ export class ApiService {
     return lastValueFrom(this.http.put(url, options));
   }
 
-  // Select last UID
-  public async lastUID(options?: any) {    
-    const url = `${this.constants.API_ENDPOINT}/upload`;
-    return lastValueFrom(this.http.get(url, options));
+  // Select Getgraph
+  public async getgraph(id?: any) {    
+    const url = await`${this.constants.API_ENDPOINT}/graph/${id}`;
+    console.log(url);
+    
+    return lastValueFrom(this.http.post(url, ""));
   }
 
   // Delete img
