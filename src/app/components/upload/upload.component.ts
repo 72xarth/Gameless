@@ -44,8 +44,6 @@ export class UploadComponent {
    for(let i of this.data)console.log(i.url);
     
  
-    
-
 }
 console.log(this.data);
 
