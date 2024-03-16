@@ -17,11 +17,11 @@
                     <button mat-raised-button style="width: 5vw; color: #000000; font-size: 1vw; background-color: #ffffff;" routerLink="/Login2">Graph</button>   
                 </div>
         </div>
-        <div class="profile" style="width: 20vw; ">
-            <button mat-button  style="width: 25vw; color: #ffffff; font-size: 1vw; " routerLink="/login">Login/Register</button>  
-            <div style="width: 10vw; height: 5vw; display: flex; justify-content: center; align-items: center; background-color: #ffffff; margin-left: 2.5vw; "> 
+        <div class="profile" style="width: 20vw;  ">
+            <!-- <button mat-button  style="width: 25vw; color: #ffffff; font-size: 1vw; " routerLink="/login">Login/Register</button>   -->
+            <div style="width: 5vw; height: 5vw; display: flex; justify-content: center; align-items: center; background-color: #ffffff; margin-left:15vw;    "> 
                 <span class="material-symbols-outlined" style="font-size: 3vw; border: 1px solid rgb(255, 255, 255);">
-                    person
+                    monitoring
                 </span>
             </div>
         </div>
@@ -29,11 +29,14 @@
      <div class="container">
          <div class="maincon">
              <div class="card">
-                 <div class="text">
-                     <h1>Graph of</h1>     
+                 <div class="text" style="margin-top: 2.5vw;">
+                    <button class="button"(click)="back()"  data-text="Awesome">
+                        <span class="actual-text">&nbsp;Upload&nbsp;</span>
+                        <span aria-hidden="true" class="hover-text">&nbsp;back&nbsp;</span>
+                    </button>
                     </div>
                     <div style="width: 100%; display: flex; justify-content: center; align-items: center; margin-top: 1vw;">
-                        <div style="width: 37%;">
+                        <div style="width: 50%;">
                           <div style="width: 100%; height: 100%;">
                             <canvas id="myChart" width="100%" height="100%"></canvas>
                           </div>

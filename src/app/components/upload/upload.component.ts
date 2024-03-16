@@ -64,4 +64,8 @@ console.log(this.data);
        const response = await this.api.deleteImage(this.id);
        this.data = response;
     }
+
+    back() { 
+      window.history.back();
+  }
 }

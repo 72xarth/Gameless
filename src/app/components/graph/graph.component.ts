@@ -32,6 +32,10 @@ export class GraphComponent implements OnInit{
       console.log(this.data);
       this.createChart();
     }
+
+    back() { 
+      window.history.back();
+  }
  
  
 

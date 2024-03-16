@@ -17,54 +17,46 @@
                     <button mat-raised-button style="width: 5vw; color: #000000; font-size: 1vw; background-color: #ffffff;" routerLink="/Login2">Rank</button>   
                 </div>
         </div>
-        <div class="profile" style="width: 20vw; ">
-            <button mat-button  style="width: 25vw; color: #ffffff; font-size: 1vw; " routerLink="/login">Login/Register</button>  
-            <div style="width: 10vw; height: 5vw; display: flex; justify-content: center; align-items: center; background-color: #ffffff; margin-left: 2.5vw; "> 
-                <span class="material-symbols-outlined" style="font-size: 3vw; border: 1px solid rgb(255, 255, 255);">
-                    person
-                </span>
+        <div class="profile" style="width: 20vw; justify-content: end;">
+            <!-- <button mat-button  style="width: 5vw; color: #ffffff; font-size: 1vw; margin-right: 1vw; background-color: #000000; " (click)="back()">back</button>   -->
+            <!-- <div style="width: 10vw; height: 5vw; display: flex; justify-content: center; align-items: center; background-color: #ffffff; margin-left: 2.5vw; ">  -->
+                <!-- <span class="material-symbols-outlined" style="font-size: 3vw; ">
+                    star
+                </span> -->
+               
             </div>
         </div>
-     </div>
+     <!-- </div> -->
      <div class="container">
          <div class="maincon">
+           
              <div class="card">
+                
                  <div class="text">
-                    <div>
+                   <div style="background-color: #000000;">
+                    <button class="button"(click)="back()"  data-text="Awesome">
+                        <span class="actual-text">&nbsp;Upload&nbsp;</span>
+                        <span aria-hidden="true" class="hover-text">&nbsp;back&nbsp;</span>
+                    </button>
+                   </div>
 
-                    </div>
-                     <h1>Top 10 Rank</h1>
-                     <div>
-                        <!-- <label for="days">day of</label>
-                        <select id="days" name="days">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                        </select> -->
-                     </div>
-                     
-                     
                     </div>
                     <div style="display: flex; justify-content: center; font-size: 1.5vw;"  >
                         <table >
                             <thead>
                                 <tr >
-                                    <th>No.</th>
+                                    <th>No</th>
                                     <th>detail</th>
                                     <th>score</th>
                                 </tr>
                             </thead>
                             <tbody *ngFor=" let i of data; let j = index ;">
                                 <tr style="font-size: smaller;">
-                                    <td>{{j+1}}. <img src="{{i.url}}" alt="" width="50vw" height="50vw"></td>    
+                                    <td style="margin-right: 2vw;">{{j+1}}.<img src="{{i.url}}" alt="" width="50vw" height="50vw"></td>    
                                          <td> 
                                         <div> 
-                                            <a routerLink="/graph/{{i.GSID}}">
-                                                <td>see more </td>
+                                            <a routerLink="/graph/{{i.GSID}}" style=" text-decoration: none; color: #ff3939;">
+                                                <td >see more </td>
                                             </a>
                                             
                                          </div>
@@ -73,6 +65,7 @@
                                 </tr>
                             
                             </tbody>
+                           
                         </table>
                     </div>
                      

@@ -31,18 +31,39 @@
         </div>
      </div>
      <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: center; width:100%;">
+            <div>
+               
+            </div>
+            <div>
+                
+            </div>
+            <div style="margin-top: 2vw;">
+                <!-- <button mat-button (click)="back()" style="background-color: #ffffff;"> back</button> -->
+            </div>
+           
+        </div>
         <div class="maincon">
-            <div class="card" style="display: grid;">
-                <div style="height: 100%; justify-content: center; align-items: center; display: grid;">
+                        
+            <div class="card" style="display: grid; justify-content: center;">
+                <div style="height: 2.5vw;">
+                    <button class="button"(click)="back()"  data-text="Awesome">
+                        <span class="actual-text">&nbsp;Upload&nbsp;</span>
+                        <span aria-hidden="true" class="hover-text">&nbsp;back&nbsp;</span>
+                    </button>
+                </div>
+                
+                <div style="height: 100%; justify-content: start; align-items: center; display: grid;  margin-bottom: 6vw; ">
                     <div *ngFor="let i of data; let index = index;">
                         <div *ngIf="i === ''; else image">
                             <input type="file" (change)="upload($event)">
                         </div>
                         <ng-template #image>
-                            <div style="display: flex; align-items: center;">
-                                <span>{{index + 1}}</span>
+                            <div style="display: flex; align-items: center; align-items: center;">
+                                <span>{{index + 1}}:</span>
                                 <img src="{{i.url}}" alt="" width="100vw" height="100vw">
-                                <button (click)="deleteImage(i.gid)">Delete</button> 
+                                <h2>----> </h2>
+                                <button mat-button (click)="deleteImage(i.gid)" style="background-color: #000000; color: white;" >Delete</button> 
                             </div>
                         </ng-template>
                     </div>

@@ -45,7 +45,7 @@ export class Login2Component implements OnInit {
       
       localStorage.setItem('id',this.bool.uid);
       localStorage.setItem('name',this.bool.name);
-      localStorage.setItem('image',this.bool.url);
+      localStorage.setItem('url',this.bool.url);
         this.route.navigate(['/login2/']);
 
     }
