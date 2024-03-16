@@ -28,7 +28,6 @@ export class IndexComponent implements OnInit{
   image : any;
   ngOnInit(): void {
     this.image = localStorage.getItem('url');
-    console.log(this.image);
     
     this.id = localStorage.getItem('id');
     //console.log(this.id);
@@ -55,8 +54,9 @@ export class IndexComponent implements OnInit{
       scoreB : this.data[1].score
 
     }
-    await this.api.updatescore(json);
     this.findOne();
+    await this.api.updatescore(json);
+    
 
 }
 
@@ -70,8 +70,9 @@ export class IndexComponent implements OnInit{
       scoreB : this.data[1].score
 
     }
-    await this.api.updatescore(json);
     this.findOne();
+    await this.api.updatescore(json);
+    
 
 
   }
