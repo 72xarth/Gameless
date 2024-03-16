@@ -28,8 +28,10 @@ export class IndexComponent implements OnInit{
   image : any;
   ngOnInit(): void {
     this.image = localStorage.getItem('url');
+    console.log(this.image);
+    
     this.id = localStorage.getItem('id');
-    console.log(this.id);
+    //console.log(this.id);
     this.name = localStorage.getItem('name');
     this.findOne();
   }

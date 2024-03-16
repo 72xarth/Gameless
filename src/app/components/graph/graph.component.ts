@@ -52,9 +52,9 @@ export class GraphComponent implements OnInit{
             label: 'Image',
             data: this.data.map((item: { score : number }) => item.score),
             fill: true,
-            borderColor: 'rgb(0, 0, 204)',
+            borderColor: 'rgb(255, 0, 0)',
             tension: 0,
-            backgroundColor : 'rgb(204,229,255)'
+            backgroundColor : 'rgb(255,200,200)'
           }
         ]
       },
@@ -65,7 +65,7 @@ export class GraphComponent implements OnInit{
             ticks: {
               font :{
                 size : 15
-              },color : 'rgb(0,102,102)'
+              },color : 'rgb(0,0,0)'
             , stepSize: 5
             }
           },  x: {
@@ -74,7 +74,7 @@ export class GraphComponent implements OnInit{
               font :{
                 size : 15
               }
-              ,color : 'rgb(51,0,102)'
+              ,color : 'rgb(0,0,0)'
 
             }
           }

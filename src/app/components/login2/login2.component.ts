@@ -42,7 +42,7 @@ export class Login2Component implements OnInit {
     
     if(typeof this.bool.uid === 'number'){
       console.log(this.bool);
-      
+      localStorage.setItem('gamil',this.bool.gmail);
       localStorage.setItem('id',this.bool.uid);
       localStorage.setItem('name',this.bool.name);
       localStorage.setItem('url',this.bool.url);
