@@ -30,7 +30,7 @@ export class Login1Component implements OnInit{
   
   async findOne() {
  
-    const url = `http://localhost:3000/game/picture`;
+    const url = `https://gameapib.onrender.com/game/picture`;
     const data = await lastValueFrom(this.http.get(url));
     this.data = data;
     this.data1 = this.data[0];
@@ -47,8 +47,9 @@ export class Login1Component implements OnInit{
       scoreB : this.data[1].score
 
     }
-    await this.api.updatescore(json);
     this.findOne();
+    await this.api.updatescore(json);
+   
 
 }
 
@@ -62,8 +63,9 @@ export class Login1Component implements OnInit{
       scoreB : this.data[1].score
 
     }
-    await this.api.updatescore(json);
     this.findOne();
+    await this.api.updatescore(json);
+
 
 
   }
