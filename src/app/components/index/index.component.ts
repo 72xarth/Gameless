@@ -56,7 +56,9 @@ export class IndexComponent implements OnInit{
 
     }
     this.findOne();
-    await this.api.updatescore(json);
+    console.log(await this.api.updatescore(json));
+    
+
     
 
 }
@@ -72,6 +74,8 @@ export class IndexComponent implements OnInit{
 
     }
     this.findOne();
+    console.log(await this.api.updatescore(json));
+    
     await this.api.updatescore(json);
    
 
