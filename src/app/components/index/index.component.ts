@@ -28,6 +28,7 @@ export class IndexComponent implements OnInit{
   image : any;
   ngOnInit(): void {
     this.image = localStorage.getItem('url');
+
     
     this.id = localStorage.getItem('id');
     //console.log(this.id);
@@ -37,7 +38,7 @@ export class IndexComponent implements OnInit{
   
   async findOne() {
  
-    const url = `http://localhost:3000/game/picture`;
+    const url = `https://gameapib.onrender.com/game/picture`;
     const data = await lastValueFrom(this.http.get(url));
     this.data = data;
     this.data1 = this.data[0];
@@ -55,7 +56,9 @@ export class IndexComponent implements OnInit{
 
     }
     this.findOne();
-    await this.api.updatescore(json);
+    console.log(await this.api.updatescore(json));
+    
+
     
 
 }
@@ -71,8 +74,10 @@ export class IndexComponent implements OnInit{
 
     }
     this.findOne();
-    await this.api.updatescore(json);
+    console.log(await this.api.updatescore(json));
     
+    await this.api.updatescore(json);
+   
 
 
   }

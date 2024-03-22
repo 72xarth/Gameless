@@ -4,9 +4,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class Constants {
-  public readonly API_ENDPOINT: string = 'http://localhost:3000/game';
+  public readonly API_ENDPOINT: string = 'https://gameapib.onrender.com/game';
 }
 
 export class Constants1 {
-  public readonly API_ENDPOINT: string = 'http://localhost:3000/upload';
+  public readonly API_ENDPOINT: string = 'https://gameapib.onrender.com/upload';
 }
