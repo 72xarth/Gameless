@@ -48,8 +48,8 @@ export class Login1Component implements OnInit{
 
     }
     this.findOne();
-    console.log(await this.api.updatescore(json));
-     
+     await this.api.updatescore(json);
+
    
 
 }
@@ -65,8 +65,10 @@ export class Login1Component implements OnInit{
 
     }
     this.findOne();
-    console.log(await this.api.updatescore(json));
     
+    
+     await this.api.updatescore(json);
+  
     
 
 

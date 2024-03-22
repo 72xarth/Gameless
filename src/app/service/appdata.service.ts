@@ -101,8 +101,8 @@ public async getBefore() {
   // update score 
   public async updatescore(options?: any) {    
     const url = `${this.constants.API_ENDPOINT}/scoreupdate`;
-    
-    return lastValueFrom(this.http.put(url, options));
+    return console.log(lastValueFrom(this.http.put(url, options)));
+     
   }
 }
 
