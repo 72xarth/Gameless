@@ -14,8 +14,12 @@ export class ApiService {
   // Login 
   public async checkLogin(options?: any) {    
     const url = `${this.constants.API_ENDPOINT}/test`;
-    
     return lastValueFrom(this.http.post(url, options));
+  }
+
+  public async editPro(options?: any) {    
+    const url = `${this.constants.API_ENDPOINT}/editPro`;
+    return lastValueFrom(this.http.put(url, options));
   }
 
   // Register 
