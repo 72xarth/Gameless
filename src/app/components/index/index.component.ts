@@ -38,7 +38,7 @@ export class IndexComponent implements OnInit{
   
   async findOne() {
  
-    const url = `https://gameapib.onrender.com/game/picture`;
+    const url = /*`https://gameapib.onrender.com/game/picture`*/ 'http://localhost:3000/game/picture';
     const data = await lastValueFrom(this.http.get(url));
     this.data = data;
     this.data1 = this.data[0];
@@ -56,12 +56,11 @@ export class IndexComponent implements OnInit{
 
     }
     this.findOne();
+  
+    
     let x = await this.api.updatescore(json);
     console.log(x);
     
-
-    
-
 }
 
   async click2(){
