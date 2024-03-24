@@ -73,6 +73,11 @@ export class IndexComponent implements OnInit{
     } catch (error) {
       
     }
+
+    // 10 seconds delay before allowing voting again
+    setTimeout(() => {
+      this.findOne();
+    }, 10000);
      
    
 
@@ -103,6 +108,11 @@ export class IndexComponent implements OnInit{
     } catch (error) {
       
     }
+
+    // 10 seconds delay before allowing voting again
+    setTimeout(() => {
+      this.findOne();
+    }, 10000);
 
   }
 
