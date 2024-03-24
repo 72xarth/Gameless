@@ -25,7 +25,7 @@
     </div>
     <div class="profile" style="width: 30vh; margin-right: 1vw;">
         <button mat-raised-button style=" color: #ffffff; font-size: 1vw; background-color: rgb(0, 0, 0); width: 10vw;" routerLink="/profile">MyProfile</button> 
-        <img src="https://media.istockphoto.com/id/656673020/photo/handsome-in-spectacles.jpg?s=612x612&w=0&k=20&c=klIlcueGJlAnOehrIZNpvFrVT_olKKqhaVT77H5Fj-s=" alt="" width="70vw" height="70pvw">
+        <img src="{{image}}" alt="" width="70vw" height="70pvw">
     </div>
 </div>
             <div class="container" >
@@ -34,47 +34,45 @@
                      <div class="card" >
                         <div style="width: 100%;">
                             <h1 style=" justify-content: center; align-items: center; display: flex; font-size: xx-large; margin-bottom: 2vw;"> Edit Profile</h1> 
-                            <div style="display: grid;  justify-content: center;  align-items: center;">
-                               
-                                <div style="display: flex; gap: 1vw;">
-                                    <h4 style=" justify-content: center;  align-items: center; display: flex; "> UserName:</h4>
-                                    <div class="inputGroup">
-                                        <input type="text" required="" >
-                                        <label for="name" >Name</label >
-                                    </div>
-                                  
-                                </div>
-                                
-                                <div style="display:flex; justify-content: center;   gap: 1vw;">
-                                    <h4 style=" justify-content: center;  align-items: center; display: flex;">PassWord:</h4>
-                                    <div class="inputGroup" style="margin-right: 5.5vw;">
-                                        <input type="password"  required=""  >
-                                        <label for="name" >Name</label >
-                                    </div>
-                                </div>
-                                        <div style="display: flex; justify-content: center;">
-                                            <h4 style=" justify-content: center;  align-items: center; display: flex; margin-top: 1.5vw;">Image</h4>
-                                            <span class="material-symbols-outlined" style="margin-top: 1.5vw;">
-                                                image
-                                                </span>
+                            
+                            <form formGroup="myForm" (ngSubmit)="submitForm()">
+                                <div style="display: grid; justify-content: center; align-items: center;">
+                                    <div style="display: flex; gap: 1vw;">
+                                        <h4 style="justify-content: center; align-items: center; display: flex;">UserName:</h4>
+                                        <div class="inputGroup">
+                                            <input type="text" required="">
+                                            <label for="name">Now:{{name}}</label>
                                         </div>
-                                        <div style="display: grid; margin-top: 2vw; margin-left: 3vw;">
-                                         <form  >
-                                            <input type="file" id="fileUpload" name="fileUpload">
-                                            <button type="submit" style="color: #BC1823;"> Upload</button>
-                                          </form>
-                                     </div>
-                                     <div style="margin-top: 3vw; display: flex; justify-content: center; align-items: center;">
-                                        <button  style="width: 8vw;">
+                                    </div>
+                            
+                                    <!-- <div style="display:flex; justify-content: center; gap: 1vw;">
+                                        <h4 style="justify-content: center; align-items: center; display: flex;">PassWord:</h4>
+                                        <div class="inputGroup" style="margin-right: 5.5vw;">
+                                            <input type="password" required="">
+                                            <label for="name">new password</label>
+                                        </div>
+                                    </div> -->
+                            
+                                    <!-- <div style="display: flex; justify-content: center;">
+                                        <h4 style="justify-content: center; align-items: center; display: flex; margin-top: 1.5vw;">Image</h4>
+                                        <span class="material-symbols-outlined" style="margin-top: 1.5vw;">image</span>
+                                    </div> -->
+                            
+                                    <!-- <div style="display: grid; margin-top: 2vw; margin-left: 3vw;">
+                                        <input type="file" id="fileUpload" name="fileUpload">
+                                        
+                                    </div> -->
+                            
+                                    <div style="margin-top: 3vw; display: flex; justify-content: center; align-items: center;">
+                                        <button style="width: 8vw;"  type="submit">
                                             <span class="shadow"></span>
                                             <span class="edge"></span>
-                                            <span class="front text"> Save
-                                            </span>
-                                          </button>  
-                                     </div>
-                                       
-            
-                            </div>
+                                            <span class="front text">Save</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            
                            
                         </div>
 
