@@ -74,10 +74,7 @@ export class IndexComponent implements OnInit{
       
     }
 
-    // 10 seconds delay before allowing voting again
-    setTimeout(() => {
-      this.findOne();
-    }, 10000);
+   
      
    
 
@@ -109,10 +106,7 @@ export class IndexComponent implements OnInit{
       
     }
 
-    // 10 seconds delay before allowing voting again
-    setTimeout(() => {
-      this.findOne();
-    }, 10000);
+    
 
   }
 
