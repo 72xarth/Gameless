@@ -23,7 +23,7 @@ export const routes: Routes = [
     {path: 'login2', component: IndexComponent},
     {path: 'graph/:id', component: GraphComponent},
     {path: 'admin', component: AdminComponent},
-    {path: 'adpro', component: AdProComponent}
+    {path: 'adpro/:id', component: AdProComponent}
     
 
 ];

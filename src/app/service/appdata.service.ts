@@ -45,6 +45,12 @@ export class ApiService {
     return lastValueFrom(this.http.get(url));
   }
 
+  // Get game
+  public async getgame(id?: any) {    
+    const url = `${this.constants.API_ENDPOINT}/usegame/${id}`;
+    return lastValueFrom(this.http.get(url));
+  }
+
   public async deleteImage(id?: any) {    
     const url = `${this.constants.API_ENDPOINT}/image/${id}`;
     return lastValueFrom(this.http.delete(url));
@@ -88,6 +94,12 @@ public async getBefore() {
     console.log(url);
     
     return lastValueFrom(this.http.post(url, ""));
+  }
+//get user ad
+  public async getuse() {    
+    const url = await`${this.constants.API_ENDPOINT}/user`;
+    console.log(url);
+    return lastValueFrom(this.http.get(url));
   }
 
   // Delete img
