@@ -65,10 +65,6 @@ export class Login1Component implements OnInit{
     } catch (error) {
       
     }
-    // 10 seconds delay before allowing voting again
-    setTimeout(() => {
-      this.findOne();
-    }, 10000);
      
    
 
@@ -99,14 +95,11 @@ export class Login1Component implements OnInit{
     } catch (error) {
       
     }
-    // 10 seconds delay before allowing voting again
-    setTimeout(() => {
-      this.findOne();
-    }, 10000);
 
   }
 
-  openDialog(data: any): void {
+  async openDialog(data: any){
+    await this.api.delay(data);
     const dialogRef = this.dialog.open(ResultDialogComponent, {
       width: '250px',
       data: data

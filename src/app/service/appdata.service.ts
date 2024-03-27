@@ -108,5 +108,11 @@ public async getBefore() {
     
     return lastValueFrom(this.http.put(url, options));
   }
+
+  // Update delay
+  public async delay(options?: any) {    
+    const url = `${this.constants.API_ENDPOINT}/delay`;
+    return lastValueFrom(this.http.post(url, options));
+  }
 }
 
