@@ -40,11 +40,13 @@ export class IndexComponent implements OnInit{
   
   async findOne() {
  
-    const url = /*`https://gameapib.onrender.com/game/picture`*/ 'http://localhost:3000/game/picture';
+    const url = /*`https://gameapib.onrender.com/game/picture`*/ 'http://localhost:3000/game/';
     const data = await lastValueFrom(this.http.get(url));
+    
+    console.log(data);
+    
     this.data = data;
-    this.data1 = this.data[0];
-    this.data2 = this.data[1];
+    
   }
 
   async click1() {
@@ -53,14 +55,16 @@ export class IndexComponent implements OnInit{
     let json = {
       
       win : "A",
-      gidA : this.data[0].gid,
-      scoreA : this.data[0].score,
-      scoreUp1 : this.data[0].scoreUp,
-      gidB : this.data[1].gid,
-      scoreB : this.data[1].score,
-      scoreDown1 : this.data[1].scoreDown,
-      newScore1: this.data[0].newScore1,
-      newScore2: this.data[1].newScore2
+      gidA : this.data.gid1,
+      imageA : this.data.image1,
+      scoreA : this.data.score1,
+      scoreUp1 : this.data.scoreUp1,
+      newScore1: this.data.newScore1,
+      gidB : this.data.gid2,
+      imageB : this.data.image2,
+      scoreB : this.data.score2,
+      scoreDown1 : this.data.scoreDown1,
+      newScore2: this.data.newScore2
 
     }
     this.findOne();
@@ -85,16 +89,20 @@ export class IndexComponent implements OnInit{
     let json = {
       
       win : "B",
-      gidA : this.data[0].gid,
-      scoreA : this.data[0].score,
-      scoreUp1 : this.data[0].scoreUp,
-      gidB : this.data[1].gid,
-      scoreB : this.data[1].score,
-      scoreDown1 : this.data[1].scoreDown,
-      newScore1: this.data[0].newScore1,
-      newScore2: this.data[1].newScore2
+      gidA : this.data.gid1,
+      imageA : this.data.image1,
+      scoreA : this.data.score1,
+      scoreUp1 : this.data.scoreUp1,
+      newScore1: this.data.newScore1,
+      gidB : this.data.gid2,
+      imageB : this.data.image2,
+      scoreB : this.data.score2,
+      scoreDown1 : this.data.scoreDown1,
+      newScore2: this.data.newScore2
 
     }
+    console.log(this.data.gid1);
+    
     this.findOne();
     
     try {
@@ -111,12 +119,16 @@ export class IndexComponent implements OnInit{
 
   }
 
-  openDialog(data: any): void {
-    const dialogRef = this.dialog.open(ResultDialogComponent, {
-      width: '250px',
-      data: data
-    });
-}
+  async openDialog(data: any){
+    // console.log(data);
+     
+     await this.api.delay(data);
+     const dialogRef = this.dialog.open(ResultDialogComponent, {
+       width: '250px',
+       data: data
+     });
+ }
+ 
 
   logout(){
       localStorage.clear();
