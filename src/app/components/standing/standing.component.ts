@@ -44,10 +44,6 @@ async getDate() {
 }
 
 check(GSID: any) {
- 
-      
-      
-      
       for (let index = 0; index < this.before.length; index++) {
         if (this.before[index].GSID == GSID) {
           console.log(this.before[index].rank);

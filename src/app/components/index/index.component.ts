@@ -48,6 +48,7 @@ export class IndexComponent implements OnInit{
   }
 
   async click1() {
+   
     console.log("asas");
     let json = {
       
