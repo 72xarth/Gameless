@@ -40,7 +40,7 @@ export class Login2Component implements OnInit {
     
     
     
-    if(typeof this.bool.uid === 'number'){
+    if(this.bool.type == 0){
       console.log(this.bool);
       localStorage.setItem('gamil',this.bool.gmail);
       localStorage.setItem('id',this.bool.uid);
@@ -50,7 +50,14 @@ export class Login2Component implements OnInit {
 
     }
     else{
-      console.log("wrong");
+      console.log("admin here");
+      
+      console.log(this.bool);
+      localStorage.setItem('gamil',this.bool.gmail);
+      localStorage.setItem('id',this.bool.uid);
+      localStorage.setItem('name',this.bool.name);
+      localStorage.setItem('url',this.bool.url);
+        this.route.navigate(['/admin/']);
       
     }
   }
