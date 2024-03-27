@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
@@ -14,6 +14,10 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
     <p>CalB: {{data.newScore2}}</p>
   `,
 })
-export class ResultDialogComponent {
+export class ResultDialogComponent  implements OnInit{
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) {}
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
+
 }
