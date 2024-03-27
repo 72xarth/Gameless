@@ -8,6 +8,8 @@ import { Register4Component } from './components/register4/register4.component';
 import { StandingComponent } from './components/standing/standing.component';
 import { UploadComponent } from './components/upload/upload.component';
 import { GraphComponent } from './components/graph/graph.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { AdProComponent } from './components/ad-pro/ad-pro.component';
 
 
 export const routes: Routes = [
@@ -19,7 +21,9 @@ export const routes: Routes = [
     {path: 'rank', component: StandingComponent},
     {path: 'upload', component: UploadComponent},
     {path: 'login2', component: IndexComponent},
-    {path: 'graph/:id', component: GraphComponent}
+    {path: 'graph/:id', component: GraphComponent},
+    {path: 'admin', component: AdminComponent},
+    {path: 'adpro', component: AdProComponent}
     
 
 ];
