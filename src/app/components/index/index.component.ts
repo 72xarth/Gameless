@@ -40,7 +40,7 @@ export class IndexComponent implements OnInit{
   }
   
   async findOne() {
-    let fixtime ;
+    let fixtime = 10 ;
     let x1 = {x1:fixtime};
     const url = /*`https://gameapib.onrender.com/game/picture`*/ 'http://localhost:3000/game/';
     const data = await lastValueFrom(this.http.post(url,fixtime));
