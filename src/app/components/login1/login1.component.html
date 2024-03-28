@@ -32,25 +32,40 @@
 </div>
        <div class="container" >
                 <div class="maincon" >
+                    <div style="width: 100vw; justify-content: center; display: flex; justify-content: end;">       
+                        <input type="number" #de placeholder="Enter time in seconds">
+                        <button mat-button (click)="set(de)" style="background-color: black; color: #ffffff;">SAVE</button>
+                    </div>
                     <div class="mainT">
                         <h1 style="display: flex; justify-content: center; align-items: center;"> Choose the game</h1> 
                         <h1 style="display: flex; justify-content: center; align-items: center;"> that you think is</h1>
                         <h1 style="display: flex; justify-content: center; align-items: center;">better </h1>
                         <div style="gap: 75vh;  display: flex; justify-content: center; width: 150vh;">
                             <div style="display: flex; justify-content: center; align-items: center; gap: 25vh;">
-                                <input type="number" #de placeholder="Enter time in seconds">
-                                <button mat-button (click)="set(de)">Update Delete Time</button>
+                                
 
                                 <div style="width: 40vh; height: 40vh; ">
-                                    <img src="{{ this.data?.image1 }}" alt="" style="width: 100%; height: 100%; border: 1vh solid;
+                                    <!-- <div style=" background-color: rgb(255, 255, 255);"> -->
+                                        <!-- <a [routerLink]="'/adpro/' + this.data?.Uuid1">
+                                            <h1 style="color: rgb(0, 0, 0); font-size: large; justify-content: center; display: flex;"> image by: {{ data?.Uname1 }}</h1>
+                                        </a> -->
+                                        
+                                    <img src="{{  this.data?.image1  }}" alt="" style="width: 100%; height: 100%; border: 1vh solid;
                                     border-image: linear-gradient(to right, #ffffff, #c10000);
                                     border-image-slice: 1;" class="zoomable-image" (click)="click1()"> 
+                                    <!-- </div> -->
                                 </div>                 
                                 <h1 style="display: flex; justify-content: center; align-items: center; font-size: 5vw;"> OR </h1>
                                 <div style="width: 40vh; height: 40vh;">
-                               <img src="{{ this.data?.image2}}" alt="" style="width: 100%; height: 100%; border: 1vh solid; 
-                                border-image: linear-gradient(to right, #5cc3ff, #ffffff);
-                                border-image-slice: 1;" class="zoomable-image" (click)="click2()">         
+                                    <!-- <div style=" background-color: rgb(255, 255, 255);"> -->
+                                        <!-- <a [routerLink]="'/adpro/' + this.data?.Uuid2">
+                                            <h1 style="color: rgb(0, 0, 0); font-size: large; justify-content: center; display: flex;"> image by: {{ data?.Uname2 }}</h1>
+                                        </a> -->
+                                        
+                                    <img src="{{  this.data?.image2  }}" alt="" style="width: 100%; height: 100%; border: 1vh solid;
+                                    border-image: linear-gradient(to right, #ffffff, #c10000);
+                                    border-image-slice: 1;" class="zoomable-image" (click)="click2()"> 
+                                    <!-- </div>         -->
                                   </div>
                             </div>
                          </div>

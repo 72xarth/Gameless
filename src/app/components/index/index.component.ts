@@ -30,7 +30,7 @@ export class IndexComponent implements OnInit{
   id: any;
   name : any;
   image : any;
-  fixtime!: any; // ใส่ ! เพื่อบอก TypeScript ว่าตัวแปรนี้จะถูกกำหนดค่าในภายหลัง
+  fixtime!: any; 
   ngOnInit(): void {
     this.image = localStorage.getItem('url');
     this.fixtime = localStorage.getItem('fixtime');

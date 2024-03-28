@@ -15,10 +15,12 @@ export class AdProComponent {
 
   constructor(private api: ApiService, private route: ActivatedRoute) {}
   id!: any ;
-  data : any;
+  data! : any;
 
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id')||'';
+    console.log(this.id);
+    
     this.getData();
   }
 
