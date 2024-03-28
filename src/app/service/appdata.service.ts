@@ -33,7 +33,7 @@ export class ApiService {
 
   //upload
   public async upload(option?: any,id? : any) {
-    const url = "http://localhost:3000/upload"+"/"+id;    
+    const url =  `${this.constants.API_ENDPOINT}/upload/${id}`;    
     return lastValueFrom(this.http.post(url, option));
   }
 
@@ -128,5 +128,8 @@ public async getBefore() {
     
     return lastValueFrom(this.http.post(url, options));
   }
+
+
+ 
 }
 

@@ -46,6 +46,7 @@ export class Login2Component implements OnInit {
       localStorage.setItem('id',this.bool.uid);
       localStorage.setItem('name',this.bool.name);
       localStorage.setItem('url',this.bool.url);
+      localStorage.setItem('fixtime',this.bool.fixtime)
         this.route.navigate(['/login2/']);
 
     }
@@ -57,6 +58,7 @@ export class Login2Component implements OnInit {
       localStorage.setItem('id',this.bool.uid);
       localStorage.setItem('name',this.bool.name);
       localStorage.setItem('url',this.bool.url);
+      localStorage.setItem('fixtime',this.bool.fixtime)
         this.route.navigate(['/admin/']);
       
     }
