@@ -16,6 +16,10 @@ import { ApiService } from '../../service/appdata.service';
 export class Register4Component implements OnInit {
   myForm!: FormGroup;
   FormData : FormData = new FormData();
+  id: any;
+  name : any;
+  image : any;
+  fixtime!: any;
   constructor(private formBuilder: FormBuilder,private api: ApiService,private route:Router) { }
 
   ngOnInit(): void {
@@ -24,6 +28,8 @@ export class Register4Component implements OnInit {
       gmail: ['' ],
       password: [''],
       file:['']
+
+      
       
     });
   }
@@ -37,7 +43,6 @@ export class Register4Component implements OnInit {
     this.register(this.FormData);
     this.FormData.forEach((value,key)=>{
       console.log(key,' ',value);
-      
     });
   }
 
