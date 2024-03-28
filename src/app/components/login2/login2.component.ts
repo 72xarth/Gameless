@@ -35,11 +35,6 @@ export class Login2Component implements OnInit {
 
   async Checklogin(jsonData: any) {
     this.bool = await this.api.checkLogin(jsonData);
- 
-
-    
-    
-    
     if(this.bool.type == 0){
       console.log(this.bool);
       localStorage.setItem('gmail',this.bool.gmail);
@@ -52,7 +47,6 @@ export class Login2Component implements OnInit {
     }
     else{
       console.log("admin here");
-      
       console.log(this.bool);
       localStorage.setItem('gmail',this.bool.gmail);
       localStorage.setItem('id',this.bool.uid);

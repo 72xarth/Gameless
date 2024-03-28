@@ -19,9 +19,10 @@ export class ApiService {
 
 
   //update profile
-  public async editPro(id? : any,options?: any) {    
+  public async editPro(options?: any,id? : any) {    
     const url = `${this.constants.API_ENDPOINT}/editPro/${id}`;
     return lastValueFrom(this.http.put(url, options));
+    
   }
 
   // Register 

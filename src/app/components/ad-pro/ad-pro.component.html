@@ -52,6 +52,7 @@
                                 <h1 style="display: flex; justify-content: center;">User game</h1>
                                 <div *ngFor="let i of data" style="height: 4vw; width: 4vw; gap: 2vw; display: flex; align-items: center; margin-left: 2vw;">
                                     <img *ngIf="i.url; else comingSoon" src="{{i.url}}" alt="">
+                                    <h2>score</h2>
                                 </div>
                                     <ng-template #comingSoon>
                                         <p style="font-size: 2.5vw; display: flex; justify-content: center; align-items: center; ">Coming soon</p>
