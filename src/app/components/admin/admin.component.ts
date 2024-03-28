@@ -25,9 +25,13 @@ export class AdminComponent {
     this.id = localStorage.getItem('id');
     this.name = localStorage.getItem('name');
     this.data = await this.api.getuse();
-      
-   
   
   }
+
+  logout(){
+    localStorage.clear();
+    this.route.navigate(['/login/']);
+}
+  
 
 }

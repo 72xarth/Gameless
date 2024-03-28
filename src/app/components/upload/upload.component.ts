@@ -49,8 +49,8 @@ console.log(this.data);
 
  }
 
- async upload(event : any) {
-  const file  = event.target.files[0];
+ async upload($event : any) {
+  const file  = ($event.target as HTMLInputElement).files![0];
     const formData = new FormData();
     this.data = formData.append('file',file);
     const response = await this.api.upload(formData,this.id);

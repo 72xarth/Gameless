@@ -35,12 +35,12 @@
                         <div style="width: 100%;">
                             <h1 style=" justify-content: center; align-items: center; display: flex; font-size: xx-large; margin-bottom: 2vw;"> Edit Profile</h1> 
                             
-                            <form formGroup="myForm" (ngSubmit)="submitForm()">
+                            <form [formGroup] ="myForm" (ngSubmit)="submitForm()">
                                 <div style="display: grid; justify-content: center; align-items: center;">
                                     <div style="display: flex; gap: 1vw;">
                                         <h4 style="justify-content: center; align-items: center; display: flex;">UserName:</h4>
                                         <div class="inputGroup">
-                                            <input type="text" required="">
+                                            <input type="text" required="" formControlName="name">
                                             <label for="name">Now:{{name}}</label>
                                         </div>
                                     </div>
@@ -56,10 +56,10 @@
                                     <!-- <div style="display: flex; justify-content: center;">
                                         <h4 style="justify-content: center; align-items: center; display: flex; margin-top: 1.5vw;">Image</h4>
                                         <span class="material-symbols-outlined" style="margin-top: 1.5vw;">image</span>
-                                    </div> -->
+                                    </div>
                             
-                                    <!-- <div style="display: grid; margin-top: 2vw; margin-left: 3vw;">
-                                        <input type="file" id="fileUpload" name="fileUpload">
+                                    <div style="display: grid; margin-top: 2vw; margin-left: 3vw;">
+                                        <input class="form-control" type="file" (change)="upfile($event)">
                                         
                                     </div> -->
                             

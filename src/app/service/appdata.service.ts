@@ -17,8 +17,10 @@ export class ApiService {
     return lastValueFrom(this.http.post(url, options));
   }
 
-  public async editPro(options?: any) {    
-    const url = `${this.constants.API_ENDPOINT}/editPro`;
+
+  //update profile
+  public async editPro(id? : any,options?: any) {    
+    const url = `${this.constants.API_ENDPOINT}/editPro/${id}`;
     return lastValueFrom(this.http.put(url, options));
   }
 
