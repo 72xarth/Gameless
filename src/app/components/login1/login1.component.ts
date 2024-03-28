@@ -38,7 +38,7 @@ export class Login1Component implements OnInit{
   
   async findOne() {
     let fixtime ;
-    let x = {x:fixtime};
+    let x1 = {x1:fixtime};
     const url = /*`https://gameapib.onrender.com/game/picture`*/ 'http://localhost:3000/game/';
     const data = await lastValueFrom(this.http.post(url,fixtime));
     

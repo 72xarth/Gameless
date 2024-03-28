@@ -28,9 +28,10 @@ export class IndexComponent implements OnInit{
   id: any;
   name : any;
   image : any;
+  fixtime : any;
   ngOnInit(): void {
     this.image = localStorage.getItem('url');
-
+    this.fixtime = localStorage.getItem('fixtime');
     
     this.id = localStorage.getItem('id');
     //console.log(this.id);
@@ -39,9 +40,10 @@ export class IndexComponent implements OnInit{
   }
   
   async findOne() {
- 
+    let fixtime ;
+    let x1 = {x1:fixtime};
     const url = /*`https://gameapib.onrender.com/game/picture`*/ 'http://localhost:3000/game/';
-    const data = await lastValueFrom(this.http.get(url));
+    const data = await lastValueFrom(this.http.post(url,fixtime));
     
     console.log(data);
     
