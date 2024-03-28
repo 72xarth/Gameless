@@ -24,6 +24,18 @@ export class ApiService {
     return lastValueFrom(this.http.put(url, options));
   }
 
+ //update image
+public async updateImage(newUrl : any, id?: any) {
+  const url = `${this.constants.API_ENDPOINT}/updateImage/${id}`;
+  return lastValueFrom(this.http.put(url, newUrl));
+}
+
+//update image2
+public async updateImage2(newUrl : any, gid?: any) {
+  const url = `${this.constants.API_ENDPOINT}/updateImage2/${gid}`;
+  return lastValueFrom(this.http.put(url, newUrl));
+}
+
   // Register 
   public async register(option?: any) {
     const url = `${this.constants.API_ENDPOINT}/game/insert`;
@@ -35,15 +47,19 @@ export class ApiService {
 
   //upload
   public async upload(option?: any,id? : any) {
-    const url =  `${this.constants.API_ENDPOINT}/upload/${id}`;    
+    const url =  `http://localhost:3000/upload/${id}`;   
+    console.log(url);
+     
     return lastValueFrom(this.http.post(url, option));
   }
-
-
 
   // Get image
   public async getImage(id?: any) {    
     const url = `${this.constants.API_ENDPOINT}/image/${id}`;
+    console.log("SSSS");
+    
+    console.log(url);
+    
     return lastValueFrom(this.http.get(url));
   }
 
@@ -113,6 +129,8 @@ public async getBefore() {
   // Insert picture
   public insertPicture(option?: any){
     const url = `${this.constants.API_ENDPOINT}/upload`;
+    console.log(url);
+    
     return this.http.post(url, option);
   }
 
