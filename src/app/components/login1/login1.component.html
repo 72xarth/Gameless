@@ -38,8 +38,8 @@
                         <h1 style="display: flex; justify-content: center; align-items: center;">better </h1>
                         <div style="gap: 75vh;  display: flex; justify-content: center; width: 150vh;">
                             <div style="display: flex; justify-content: center; align-items: center; gap: 25vh;">
-                                <input type="number" [(ngModel)]="fixtime" placeholder="Enter time in seconds">
-                                <button mat-button (click)="findOne()">Update Delete Time</button>
+                                <input type="number" #de placeholder="Enter time in seconds">
+                                <button mat-button (click)="set(de)">Update Delete Time</button>
 
                                 <div style="width: 40vh; height: 40vh; ">
                                     <img src="{{ this.data?.image1 }}" alt="" style="width: 100%; height: 100%; border: 1vh solid;

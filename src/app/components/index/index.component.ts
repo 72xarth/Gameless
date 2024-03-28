@@ -11,14 +11,16 @@ import { MatDialog } from '@angular/material/dialog';
 import { ResultDialogComponent } from '../login1/ResultDialogComponent';
 
 
+
 @Component({
   selector: 'app-index',
   standalone: true,
-  imports: [RouterModule,MatButtonModule,CommonModule],
+  imports: [RouterModule,MatButtonModule,CommonModule,FormsModule],
   templateUrl: './index.component.html',
   styleUrl: './index.component.scss'
 })
 export class IndexComponent implements OnInit{
+
   
 
   constructor(private http : HttpClient,private api : ApiService,private route:Router, private dialog: MatDialog){}
@@ -28,7 +30,7 @@ export class IndexComponent implements OnInit{
   id: any;
   name : any;
   image : any;
-  fixtime : any;
+  fixtime!: any; // ใส่ ! เพื่อบอก TypeScript ว่าตัวแปรนี้จะถูกกำหนดค่าในภายหลัง
   ngOnInit(): void {
     this.image = localStorage.getItem('url');
     this.fixtime = localStorage.getItem('fixtime');
@@ -40,10 +42,11 @@ export class IndexComponent implements OnInit{
   }
   
   async findOne() {
-    let fixtime = 10 ;
-    let x1 = {x1:fixtime};
+    console.log(this.fixtime);
+    
+    let x1 = {x1:this.fixtime};
     const url = /*`https://gameapib.onrender.com/game/picture`*/ 'http://localhost:3000/game/';
-    const data = await lastValueFrom(this.http.post(url,fixtime));
+    const data = await lastValueFrom(this.http.post(url,x1));
     
     console.log(data);
     
@@ -136,7 +139,10 @@ export class IndexComponent implements OnInit{
       localStorage.clear();
       this.route.navigate(['/login/']);
   }
+  set(de:any) {
 
+    localStorage.setItem('fixtime',de.value);
+    }
 
 }
 

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
-import { RouterLink, RouterModule } from '@angular/router';
+import { Router, RouterLink, RouterModule } from '@angular/router';
 import { ApiService } from '../../service/appdata.service';
 import { lastValueFrom } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
@@ -18,14 +18,14 @@ import { FormsModule } from '@angular/forms'; // <-- Import FormsModule
 })
 export class Login1Component implements OnInit{
 
-  constructor(private http : HttpClient,private api : ApiService, private dialog: MatDialog){}
+  constructor(private http : HttpClient,private api : ApiService,private route:Router, private dialog: MatDialog){}
   data! : any;
   data1! : any;
   data2! : any;
   id: any;
   name : any;
   image : any;
-  fixtime : any;
+  fixtime!: any; // ใส่ ! เพื่อบอก TypeScript ว่าตัวแปรนี้จะถูกกำหนดค่าในภายหลัง
   ngOnInit(): void {
     this.image = localStorage.getItem('url');
     this.fixtime = localStorage.getItem('fixtime');
@@ -37,10 +37,11 @@ export class Login1Component implements OnInit{
   }
   
   async findOne() {
-    let fixtime ;
-    let x1 = {x1:fixtime};
+    console.log(this.fixtime);
+    
+    let x1 = {x1:this.fixtime};
     const url = /*`https://gameapib.onrender.com/game/picture`*/ 'http://localhost:3000/game/';
-    const data = await lastValueFrom(this.http.post(url,fixtime));
+    const data = await lastValueFrom(this.http.post(url,x1));
     
     console.log(data);
     
@@ -127,6 +128,12 @@ export class Login1Component implements OnInit{
        data: data
      });
  }
+
+ set(de:any) {
+
+  localStorage.setItem('fixtime',de.value);
+  }
+ 
 
 
 
