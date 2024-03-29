@@ -8,8 +8,8 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
     <p>Winner: {{data.win}}</p>
     <p>Score A: {{data.scoreA}}</p>
     <p>Score B: {{data.scoreB}}</p>
-    <p>Score +: {{data.scoreUp1}}</p>
-    <p>Score -: {{data.scoreDown1}}</p>
+    <p>Score Up and Down : {{data.scoreDown1}}</p>
+    <p>Score Up and Down : {{data.scoreUp1}}</p>
     <p>CalA: {{data.newScore1}}</p>
     <p>CalB: {{data.newScore2}}</p>
   `,
