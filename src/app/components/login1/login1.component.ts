@@ -124,8 +124,8 @@ export class Login1Component implements OnInit{
      
      await this.api.delay(data);
      const dialogRef = this.dialog.open(ResultDialogComponent, {
-       width: '250px',
-       data: data
+       width: '400px',
+       data: data,
      });
  }
 
