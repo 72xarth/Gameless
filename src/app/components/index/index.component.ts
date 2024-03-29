@@ -45,7 +45,7 @@ export class IndexComponent implements OnInit{
     console.log(this.fixtime);
     
     let x1 = {x1:this.fixtime};
-    const url = /*`https://gameapib.onrender.com/game/picture`*/ 'http://localhost:3000/game/';
+    const url = /*`https://gameapib.onrender.com/game/picture`*/ 'https://gameapib.onrender.com/game/';
     const data = await lastValueFrom(this.http.post(url,x1));
     
     console.log(data);

@@ -48,7 +48,7 @@ public async updateImage2(newUrl : any, gid?: any) {
 
   //upload
   public async upload(option?: any,id? : any) {
-    const url =  `http://localhost:3000/upload/${id}`;   
+    const url =  `https://gameapib.onrender.com/upload/${id}`;   
     console.log(url);
      
     return lastValueFrom(this.http.post(url, option));
